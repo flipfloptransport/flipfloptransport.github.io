@@ -1,5 +1,5 @@
-#todd {
-  color: orange; }
+html {
+  box-sizing: border-box; }
 
-body {
-  background-color: #eee; }
+*, *::after, *::before {
+  box-sizing: inherit; }

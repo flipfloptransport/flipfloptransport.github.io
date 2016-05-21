@@ -10,7 +10,6 @@ const gulp = require('gulp')
 const config = {
 	siteRoot: './_site',
 	publicDir: './public',
-	nodeDir: './node_modules',
 	sassFilter:  './_css/**/*.?(s)css',
 	jsFilter:  './_js/**/*.js'
 }
@@ -18,11 +17,7 @@ const config = {
 gulp.task('css', () => {
 	gulp.src(config.sassFilter)
 		.pipe(sass({
-			style: 'compressed',
-			includePaths: [
-				config.nodeDir + '/bourbon/',
-				config.nodeDir + '/neat/'
-			]
+			style: 'compressed'
 			}).on("error", notify.onError(function (error) {
 				return "Error: " + error.message;
 			})))
@@ -38,9 +33,11 @@ gulp.task('js', () => {
 });
 
 gulp.task('jekyll', () => {
-  const jekyll = child.spawn('jekyll', ['build',
+  const jekyll = child.spawn('bundle', [
+  	'exec',
+  	'jekyll',
+    'build',
     '--watch',
-    '--incremental',
     '--drafts'
   ]);
 

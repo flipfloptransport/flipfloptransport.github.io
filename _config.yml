@@ -16,7 +16,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 repository: https://github.com/WebsByTodd/gulp-jekyll.git
 
-exclude: ["node_modules", "package.json", "gulpfile.js", "temp"]
+exclude: ["node_modules", "package.json", "gulpfile.js", "temp", "Gemfile", "Gemfile.lock", "README.md"]
 
 # Build settings
 markdown: kramdown
