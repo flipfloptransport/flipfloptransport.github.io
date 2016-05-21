@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebsByTodd/WebsByTodd.git"
+    "url": "git+https://github.com/WebsByTodd/gulp-jekyll.git"
   },
   "author": "Todd <todd@websbytodd.com> (http://www.websbytodd.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WebsByTodd/WebsByTodd/issues"
+    "url": "https://github.com/WebsByTodd/gulp-jekyll/issues"
   },
-  "homepage": "https://github.com/WebsByTodd/WebsByTodd#readme",
+  "homepage": "https://github.com/WebsByTodd/gulp-jekyll#gulp-jekyll",
   "devDependencies": {
     "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",

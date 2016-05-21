@@ -1,32 +1,43 @@
-const gulp = require('gulp');
-const concat = require('gulp-concat');
-const sass = require('gulp-sass');
-const child = require('child_process');
-const gutil = require('gulp-util');
-const uglify = require('gulp-uglify');
-const browserSync = require('browser-sync').create();
+const gulp = require('gulp')
+	concat = require('gulp-concat')
+	sass = require('gulp-sass')
+	child = require('child_process')
+	gutil = require('gulp-util')
+	uglify = require('gulp-uglify')
+	notify = require('gulp-notify')
+	browserSync = require('browser-sync').create();
 
-const cssFiles = '_css/**/*.?(s)css';
-const jsFiles = '_js/**/*.js';
-const siteRoot = '_site';
+const config = {
+	siteRoot: './_site',
+	publicDir: './public',
+	sassFilter:  './_css/**/*.?(s)css',
+	jsFilter:  './_js/**/*.js'
+}
 
 gulp.task('css', () => {
-	gulp.src(cssFiles)
-		.pipe(sass())
+	gulp.src(config.sassFilter)
+		.pipe(sass({
+			style: 'compressed'
+			}).on("error", notify.onError(function (error) {
+				return "Error: " + error.message;
+			})))
 		.pipe(concat('all.css'))
-		.pipe(gulp.dest('public'))
+		.pipe(gulp.dest(config.publicDir))
 });
 
 gulp.task('js', () => {
-	gulp.src(jsFiles)
+	gulp.src(config.jsFilter)
+		.pipe(concat('all.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('public'))
+		.pipe(gulp.dest(config.publicDir))
 });
 
 gulp.task('jekyll', () => {
-  const jekyll = child.spawn('jekyll', ['build',
+  const jekyll = child.spawn('bundle', [
+  	'exec',
+  	'jekyll',
+    'build',
     '--watch',
-    '--incremental',
     '--drafts'
   ]);
 
@@ -44,13 +55,13 @@ gulp.task('default', ['css', 'js', 'jekyll', 'serve']);
 
 gulp.task('serve', () => {
   browserSync.init({
-    files: [siteRoot + '/**'],
+    files: [config.siteRoot + '/**'],
     port: 4000,
     server: {
-      baseDir: siteRoot
+      baseDir: config.siteRoot
     }
   });
   
-  gulp.watch(cssFiles, ['css']);
-  gulp.watch(jsFiles, ['js']);
+  gulp.watch(config.sassFilter, ['css']);
+  gulp.watch(config.jsFilter, ['js']);
 });
