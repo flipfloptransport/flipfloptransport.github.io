@@ -1,21 +1,21 @@
 {
-  "name": "websbytodd",
+  "name": "flipfliptransport",
   "version": "1.0.0",
-  "description": "Premium web solutions",
+  "description": "Flip Flop Transport, wedding car, shuttle, limousine, tours, North Myrtle Beach",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WebsByTodd/gulp-jekyll.git"
+    "url": "git+https://github.com/flipfloptransport/flipfloptransport.github.io"
   },
   "author": "Todd <todd@websbytodd.com> (http://www.websbytodd.com)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WebsByTodd/gulp-jekyll/issues"
+    "url": "https://github.com/flipfloptransport/flipfloptransport.github.io/issues"
   },
-  "homepage": "https://github.com/WebsByTodd/gulp-jekyll#gulp-jekyll",
+  "homepage": "http://flipfloptransport.github.io",
   "devDependencies": {
     "browser-sync": "^2.11.2",
     "gulp": "^3.9.1",
