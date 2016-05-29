@@ -1,0 +1,120 @@
+// refills.bourbon.io/type-systems/
+// 'Traditional'
+$base-border-radius: 3px !default;
+$base-line-height: 1.5em !default;
+$base-spacing: 1.5em !default;
+$base-font-color: $grey-dark !default;
+$sans-serif: 'Noto Sans', sans-serif;
+$serif: 'Radley', serif;
+
+h1, h2, h3, p {
+	margin: 0;
+}
+
+hr {
+	border-bottom: 1px solid #DDD;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
+	margin: $base-spacing 0;
+}
+
+p {
+	color: $base-font-color;
+	line-height: $base-line-height;
+}
+
+a {
+	color: $action-color;
+	text-decoration: none;
+}
+
+h1 {
+	font-family: $serif;
+	font-size: 1.9em;
+	font-weight: 700;
+	margin-bottom: 0.3em;
+
+	@include media($medium-screen) {
+		font-size: 2.6em;
+	}
+}
+
+h2 {
+	font-family: $serif;
+	font-size: 1.3em;
+	font-weight: 400;
+	line-height: 1.25em;
+	margin-bottom: 0.9em;
+	display: inline;
+	@include media($medium-screen) {
+		font-size: 1.5em;
+	}
+}
+
+code {
+	background: #F7F7F7;
+	border-radius: $base-border-radius * 1.5;
+	border: 1px solid #E0E0E0;
+	font-size: 0.75em;
+	font-style: normal;
+	padding: 0.1em 0.4em;
+	white-space: nowrap;
+}
+
+h3 {
+	font-family: $serif;
+	font-size: 1.4em;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 1.3em;
+	margin-bottom: 0.4em;
+}
+
+p.subtle {
+	color: transparentize($base-font-color, 0.6);
+	font-family: $serif;
+	font-style: italic;
+	margin-bottom: 0.3em;
+}
+
+p {
+	font-family: $sans-serif;
+	letter-spacing: 1;
+	line-height: 1.55em;
+	margin-bottom: 1.5em;
+
+	span {
+		font-family: $serif;
+		font-size: 1.2em;
+		font-style: italic;
+	}
+}
+
+a.read-more {
+	display: inline-block;
+	font-family: $sans-serif;
+	font-size: 0.8em;
+	font-weight: 700;
+	margin-left: 0.2em;
+	position: relative;
+	text-transform: uppercase;
+
+	span {
+		font-family: $sans-serif;
+		font-size: 1.5em;
+		font-style: normal;
+		position: absolute;
+		right: -12px;
+		top: -1px;
+	}
+}
+
+hr {
+	width: 3em;
+}
+
+.italic {
+	font-family: $serif;
+	font-style: italic;
+}

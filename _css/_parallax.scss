@@ -1,0 +1,87 @@
+//Extra small screen variables
+$parallax-background-height-xs: 239px;
+$parallax-window-height-xs: $parallax-background-height-xs;
+
+//Small screen variables
+$parallax-background-height-sm: 358px;
+$parallax-window-height-sm: $parallax-background-height-sm;
+
+//Medium screen variables
+$parallax-background-height-md: 573px;
+$parallax-window-height-md: $parallax-background-height-md / 2;
+
+//Large screen variables
+$parallax-background-height-lg: 764px;
+$parallax-window-height-lg: $parallax-background-height-lg / 2;
+  
+.parallax-window {
+	height: $parallax-window-height-xs;
+	top: 0;
+	@include media(min-width $small-screen){
+		height: $parallax-window-height-sm;
+	}
+	@include media(min-width $medium-screen){
+		height: $parallax-window-height-md;
+	}
+	@include media(min-width $large-screen){
+		height: $parallax-window-height-lg;
+	}
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 100%;
+	margin-bottom: 100px;
+}
+
+.parallax-static-content {
+	color: #9A9A8A;
+	padding: 8em 0;
+	position: relative;
+	z-index: 9;
+}
+
+.parallax-background {
+	background-position: top;
+	background-size: cover;
+	height: $parallax-background-height-xs;
+	@include media(min-width $small-screen){	
+		height: $parallax-background-height-sm;
+	}
+	@include media(min-width $medium-screen){
+		height: $parallax-background-height-md;
+	}
+	@include media(min-width $large-screen){
+		height: $parallax-background-height-lg;
+	}
+	left: 0;
+	position: absolute;
+	top: 0;
+	@include media(min-width $small-screen){
+		//top: - $parallax-window-height-sm / 3;
+	}
+	@include media(min-width $medium-screen){
+		//top: - $parallax-window-height-md / 3;
+	}
+	@include media(min-width $large-screen){
+		top: - $parallax-window-height-lg / 3;
+	}	
+	width: 100%;
+	> img {
+		width: $xs-screen;
+		height: $parallax-background-height-xs;
+		@include media(min-width $small-screen){
+			width: $small-screen;
+			height: $parallax-background-height-sm;
+		}
+		@include media(min-width $medium-screen){
+			width: $medium-screen;
+			height: $parallax-background-height-md;
+		}
+		@include media(min-width $large-screen){
+			width: $large-screen;
+			height: $parallax-background-height-lg;
+		}		
+	}
+}
+
+// Based on http://codepen.io/skeurentjes/

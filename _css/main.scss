@@ -1,7 +1,76 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
+@import "variables";
+@import "parallax";
+@import "fonts";
 
-$pink: #d20e6b;
-$black: #231f20;
-$green-light: #02a64f;
-$green-dark: #0a7a40;
+.site-header {
+	> #logo {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+.page-content {
+	@include outer-container (100%);
+	@include media(min-width $small-screen){
+		@include outer-container (95%);
+	}
+	@include media(min-width $medium-screen){
+		@include outer-container (768px);
+	}
+	@include media(min-width $large-screen){
+		@include outer-container (1024px);
+	}	
+	
+	> #top-left, > #top-right {
+		@include span-columns(6);
+		@include omega;
+		margin-top: $content-margin;
+		p {
+			margin-bottom: 0;
+		}
+		> ul {
+			margin: 0;
+			> li {
+				display: block;
+				&:nth-child(1){
+					@include span-columns(2);
+				}
+				&:nth-child(2){
+					@include span-columns(2);
+					@include shift(1);
+				}
+				&:nth-child(3){
+					@include span-columns(2);
+					@include shift(2.5);
+				}
+				&:nth-child(4){
+					@include span-columns(2);
+					@include shift(4);
+				}												
+			}
+		}
+	}
+	> #center {
+		@include span-columns(12);
+		margin: $content-margin;
+		@include media(min-width $medium-screen){
+			margin: 0;
+			@include span-columns(6);
+			@include shift(3);
+		}
+		> .image-window {
+			max-height: 100px;
+			overflow: hidden;
+			> img {
+				display: none;
+				max-width: 100%;
+				height: auto;
+				&.active {
+					display: inline;
+				}
+			}
+		}		
+	}
+}
