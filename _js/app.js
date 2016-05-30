@@ -1,16 +1,14 @@
 function fadeOutIn( $curr, $next ) {
-	$curr.fadeOut(600).removeClass('active');
-	$next.fadeIn(600).addClass('active');
+	$curr.animate({opacity: 0}, 600, null).removeClass('active');
+	$next.animate({opacity: 1}, 600, null).addClass('active');	
 }
 
 $(document).ready( function(){
 	var SLIDER_INTERVAL = 4000;
 	var $image1, $image2, $swp;
 	
-	$image1 = $('.wedding1');
-	$image2 = $('.wedding2');
-	
-	$image1.addClass('active');
+	$image1 = $('#wedding1');
+	$image2 = $('#wedding2');
 	
 	setInterval( function(){
 		fadeOutIn($image1, $image2);

@@ -1,14 +1,27 @@
 @import "bourbon/bourbon";
 @import "neat/neat";
 @import "variables";
-@import "parallax";
 @import "fonts";
 
 .site-header {
-	> #logo {
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
+	> div {
+		@include span-columns(12);
+		text-align: center;
+		margin-bottom: $content-margin;
+		> #logo {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		@include media(min-width $medium-screen){
+			@include span-columns(6);
+			&#top-left{
+				@include omega;
+			}			
+			&#top-right{
+				margin-top: 50px;
+			}
+		}
 	}
 }
 .page-content {
@@ -21,44 +34,34 @@
 	}
 	@include media(min-width $large-screen){
 		@include outer-container (1024px);
-	}	
-	
-	> .top {
-		@include span-columns(12);
-		text-align: center;		
-		margin-top: $content-margin;
-		margin-bottom: $content-margin;		
-		p {
-			//margin-bottom: 0;
+	}
+	> #featured > img {
+		width: $xs-screen;
+		height: $featured-img-height-xs;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: $content-margin;
+		display: block;
+		max-width: 100%;
+		@include media(min-width $small-screen){
+			width: $small-screen;
+			height: $featured-img-height-sm;
 		}
-		&#top-right {
-			text-align: center;
-			> p {
-				//font-size: 0.9em;
-				@include span-columns(12);
-			}
-			> #one {
-				text-align: left;
-			}
-			> #two {
-				@include span-columns(8 of 12);
-				@include shift(2);
-			}
-			> #three {
-				@include span-columns(7 of 12);
-				@include shift(5);
-			}
-			> #four {
-				text-align: right;
-			}									
+		@include media(min-width $medium-screen){
+			width: $medium-screen;
+			height: $featured-img-height-md;
 		}
+		@include media(min-width $large-screen){
+			width: $large-screen;
+			height: $featured-img-height-lg;
+		}						
 	}
 	> #below-the-fold {
 		@include span-columns(12);
 		@include media(min-width $medium-screen){
 			margin: 0;
-			@include span-columns(6);
-			@include shift(3);
+			@include span-columns(8);
+			@include shift(2);
 		}
 		> .center {
 			text-align: center;
@@ -80,19 +83,41 @@
 				}				
 				margin-bottom: $content-margin/4;
 				text-align: center;
+				> p {
+					display: inline;
+				}
 			}
 		}
 		> .image-window {
-			max-height: 500px;
 			overflow: hidden;
+			margin-bottom: $content-margin;
+			margin-top: $content-margin;
+			height: 224px;
+			max-height: 224px;
+			@include media(min-width $small-screen){
+				height: 337px;
+				max-height: 337px;
+			}
 			> img {
 				display: none;
 				max-width: 100%;
 				height: auto;
+				width: 320px;
+				@include media(min-width $small-screen){
+					width: $small-screen;
+				}
 				&.active {
-					display: inline;
+					display: block;
+					margin-left: auto;
+					margin-right: auto;
 				}
 			}
-		}		
+		}
+		> #tours {
+			margin: $content-margin 0;
+		}
+		> #phone {
+			padding: $content-margin*2;
+		}
 	}
 }

@@ -4,66 +4,6 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-.parallax-window {
-  height: 239px;
-  top: 0;
-  overflow: hidden;
-  position: relative;
-  text-align: center;
-  width: 100%;
-  margin-bottom: 100px; }
-  @media screen and (min-width: 480px) {
-    .parallax-window {
-      height: 358px; } }
-  @media screen and (min-width: 768px) {
-    .parallax-window {
-      height: 286.5px; } }
-  @media screen and (min-width: 1024px) {
-    .parallax-window {
-      height: 382px; } }
-
-.parallax-static-content {
-  color: #9A9A8A;
-  padding: 8em 0;
-  position: relative;
-  z-index: 9; }
-
-.parallax-background {
-  background-position: top;
-  background-size: cover;
-  height: 239px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
-  @media screen and (min-width: 480px) {
-    .parallax-background {
-      height: 358px; } }
-  @media screen and (min-width: 768px) {
-    .parallax-background {
-      height: 573px; } }
-  @media screen and (min-width: 1024px) {
-    .parallax-background {
-      height: 764px; } }
-  @media screen and (min-width: 1024px) {
-    .parallax-background {
-      top: -127.33333px; } }
-  .parallax-background > img {
-    width: 320px;
-    height: 239px; }
-    @media screen and (min-width: 480px) {
-      .parallax-background > img {
-        width: 480px;
-        height: 358px; } }
-    @media screen and (min-width: 768px) {
-      .parallax-background > img {
-        width: 768px;
-        height: 573px; } }
-    @media screen and (min-width: 1024px) {
-      .parallax-background > img {
-        width: 1024px;
-        height: 764px; } }
-
 h1, h2, h3, p {
   margin: 0; }
 
@@ -79,7 +19,7 @@ p {
   line-height: 1.5em; }
 
 a {
-  color: pink;
+  color: #d20e6b;
   text-decoration: none; }
 
 h1 {
@@ -96,8 +36,8 @@ h2 {
   font-size: 1.3em;
   font-weight: 400;
   line-height: 1.25em;
-  margin-bottom: 0.9em;
-  display: inline; }
+  margin-bottom: 0.4em;
+  margin-top: 15px; }
   @media screen and (min-width: 768px) {
     h2 {
       font-size: 1.5em; } }
@@ -128,8 +68,7 @@ p.subtle {
 p {
   font-family: "Noto Sans", sans-serif;
   letter-spacing: 1;
-  line-height: 1.55em;
-  margin-bottom: 1.5em; }
+  line-height: 1.55em; }
   p span {
     font-family: "Radley", serif;
     font-size: 1.2em;
@@ -158,13 +97,46 @@ hr {
   font-family: "Radley", serif;
   font-style: italic; }
 
-.site-header > #logo {
+.action {
+  color: #d20e6b; }
+
+.green {
+  color: #02a64f; }
+
+.call-to-action {
+  color: #d20e6b;
+  font-style: italic;
+  font-family: "Radley", serif;
+  font-size: 1.4em; }
+
+.site-header > div {
+  float: left;
   display: block;
-  margin-right: auto;
-  margin-left: auto; }
+  margin-right: 2.35765%;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px; }
+  .site-header > div:last-child {
+    margin-right: 0; }
+  .site-header > div > #logo {
+    display: block;
+    margin-right: auto;
+    margin-left: auto; }
+  @media screen and (min-width: 768px) {
+    .site-header > div {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      .site-header > div:last-child {
+        margin-right: 0; }
+      .site-header > div#top-left {
+        margin-right: 0; }
+      .site-header > div#top-right {
+        margin-top: 50px; } }
 
 .page-content {
-  max-width: 100%;
+  max-width: 95%;
   margin-left: auto;
   margin-right: auto; }
   .page-content::after {
@@ -198,76 +170,85 @@ hr {
         clear: both;
         content: "";
         display: table; } }
-  .page-content > #top-left, .page-content > #top-right {
+  .page-content > #featured > img {
+    width: 320px;
+    height: 239px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    display: block;
+    max-width: 100%; }
+    @media screen and (min-width: 480px) {
+      .page-content > #featured > img {
+        width: 480px;
+        height: 358px; } }
+    @media screen and (min-width: 768px) {
+      .page-content > #featured > img {
+        width: 768px;
+        height: 573px; } }
+    @media screen and (min-width: 1024px) {
+      .page-content > #featured > img {
+        width: 1024px;
+        height: 764px; } }
+  .page-content > #below-the-fold {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
-    margin-right: 0;
-    margin-top: 15px; }
-    .page-content > #top-left:last-child, .page-content > #top-right:last-child {
-      margin-right: 0; }
-    .page-content > #top-left p, .page-content > #top-right p {
-      margin-bottom: 0; }
-    .page-content > #top-left > ul, .page-content > #top-right > ul {
-      margin: 0; }
-      .page-content > #top-left > ul > li, .page-content > #top-right > ul > li {
-        display: block; }
-        .page-content > #top-left > ul > li:nth-child(1), .page-content > #top-right > ul > li:nth-child(1) {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 14.70196%; }
-          .page-content > #top-left > ul > li:nth-child(1):last-child, .page-content > #top-right > ul > li:nth-child(1):last-child {
-            margin-right: 0; }
-        .page-content > #top-left > ul > li:nth-child(2), .page-content > #top-right > ul > li:nth-child(2) {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 14.70196%;
-          margin-left: 8.5298%; }
-          .page-content > #top-left > ul > li:nth-child(2):last-child, .page-content > #top-right > ul > li:nth-child(2):last-child {
-            margin-right: 0; }
-        .page-content > #top-left > ul > li:nth-child(3), .page-content > #top-right > ul > li:nth-child(3) {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 14.70196%;
-          margin-left: 21.32451%; }
-          .page-content > #top-left > ul > li:nth-child(3):last-child, .page-content > #top-right > ul > li:nth-child(3):last-child {
-            margin-right: 0; }
-        .page-content > #top-left > ul > li:nth-child(4), .page-content > #top-right > ul > li:nth-child(4) {
-          float: left;
-          display: block;
-          margin-right: 2.35765%;
-          width: 14.70196%;
-          margin-left: 34.11922%; }
-          .page-content > #top-left > ul > li:nth-child(4):last-child, .page-content > #top-right > ul > li:nth-child(4):last-child {
-            margin-right: 0; }
-  .page-content > #center {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 100%;
-    margin: 15px; }
-    .page-content > #center:last-child {
+    width: 100%; }
+    .page-content > #below-the-fold:last-child {
       margin-right: 0; }
     @media screen and (min-width: 768px) {
-      .page-content > #center {
+      .page-content > #below-the-fold {
         margin: 0;
         float: left;
         display: block;
         margin-right: 2.35765%;
-        width: 48.82117%;
-        margin-left: 25.58941%; }
-        .page-content > #center:last-child {
+        width: 65.88078%;
+        margin-left: 17.05961%; }
+        .page-content > #below-the-fold:last-child {
           margin-right: 0; } }
-    .page-content > #center > .image-window {
-      max-height: 100px;
-      overflow: hidden; }
-      .page-content > #center > .image-window > img {
+    .page-content > #below-the-fold > .center {
+      text-align: center; }
+    .page-content > #below-the-fold > ul {
+      list-style: none;
+      padding-left: 15px;
+      padding-right: 15px; }
+      .page-content > #below-the-fold > ul > li {
+        margin-bottom: 3.75px;
+        text-align: center; }
+        .page-content > #below-the-fold > ul > li:before {
+          content: "\0025CA";
+          padding-right: 8px;
+          color: #02a64f; }
+        .page-content > #below-the-fold > ul > li:after {
+          content: "\0025CA";
+          padding-left: 8px;
+          color: #02a64f; }
+        .page-content > #below-the-fold > ul > li > p {
+          display: inline; }
+    .page-content > #below-the-fold > .image-window {
+      overflow: hidden;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      height: 224px;
+      max-height: 224px; }
+      @media screen and (min-width: 480px) {
+        .page-content > #below-the-fold > .image-window {
+          height: 337px;
+          max-height: 337px; } }
+      .page-content > #below-the-fold > .image-window > img {
         display: none;
         max-width: 100%;
-        height: auto; }
-        .page-content > #center > .image-window > img.active {
-          display: inline; }
+        height: auto;
+        width: 320px; }
+        @media screen and (min-width: 480px) {
+          .page-content > #below-the-fold > .image-window > img {
+            width: 480px; } }
+        .page-content > #below-the-fold > .image-window > img.active {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; }
+    .page-content > #below-the-fold > #tours {
+      margin: 15px 0; }
+    .page-content > #below-the-fold > #phone {
+      padding: 30px; }

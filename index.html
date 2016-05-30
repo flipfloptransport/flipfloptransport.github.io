@@ -2,38 +2,30 @@
 layout: default
 id: homepage
 ---
-<div id="top-left" class="top">
-	<h1>North Myrtle Beach</h1>
-	<p><span class="action">Call now</span> for a ride</p>
+<div id="featured">
+	<img src="{{site.url}}/images/roadster-1024x764.jpg" width="1024" height="764" />
 </div>
-<!--
-<div id="top-right" class="top">
-	<p id="one" class="italic">Serving Barefoot Landing,</p>
-	<p id="two" class="italic">Alabama Theater,</p>
-	<p id="three" class="italic">Ocean Boulevard,</p>
-	<p id="four" class="italic">and more!!</p>
-</div>
--->
-{% include parallax.html %}
 
 <div id="below-the-fold">
 	<h3 class="center">For weddings, special events, or <span>any</span> occasion</h3>
 	<ul>
-		<li>Barefoot Landing</li>
-		<li>Alabama Theater</li>
-		<li>Miniature golf</li>
-		<li>The beach along Ocean Boulevard</li>
-		<li>The intracoastal waterway</li>
+		<li><p>Barefoot Landing</p></li>
+		<li><p>Alabama Theater</p></li>
+		<li><p>Miniature golf</p></li>
+		<li><p>The beach along Ocean Boulevard</p></li>
+		<li><p>The intracoastal waterway</p></li>
 	</ul>
 	<div class="image-window">
 		{% include wedding-pics.html %}
 	</div>	
-	<h2>About Us</h2>
-	<p>Our ride is a low speed electric vehicle modeled after a 1930s roadster owned and operated by Randy and Carol Briley. The car is battery powered and we recharge our batteries with the North Myrtle Beach sunshine! Not quite a taxi, but not a limousine; not a shuttle, nor a tour bus; we've created our own category to get you around town in style.<img src="{{site.url}}/images/randy-and-carol.jpeg" width="200" height="150" / ></p>
-	<span class="italic">we also offer </span><h2>Private Tours</h2>
+	<h2 class="center">About Us</h2>
+	<p>Our ride is a low speed electric vehicle modeled after a 1930s roadster owned and operated by Randy and Carol Briley. The car is battery powered and we recharge our batteries with the North Myrtle Beach sunshine! Not quite a taxi, but not a limousine; not a shuttle, nor a tour bus; we've created our own category to get you around town in style.</p>
+	<div class="image-window">	
+		<img src="{{site.url}}/images/randy-and-carol.jpeg" width="480" height="358" class="active" / >
+	</div>
+	<h3 class="center">We also offer private tours</h3>
 	<p>From your pick-up point in Windy Hill down Ocean Boulevard to the intracoastal waterway and Barefoot Landing, you'll get an overview and history of the area while you enjoy a ride in a stylish, fun, and <span class="green">Green</span> car.</p>
-
-	<p>All tours are $40.00 for up to four people in your party</p>
-
-	<p>Tour times are 9, 10, and 11 a.m. - Call to book now!</p>
+	<p id="tours" class="center">All tours are $40.00 for up to four people in your party</p>
+	<p class="center">Tour times are 9, 10, and 11 a.m. - <a class="call-to-action" href="tel:18439006621">Call to book now!</a></p>
+	<p class="center"><a id="phone" class="green" href="tel:18439006621">(843)900-6621</a></p>	
 </div>
