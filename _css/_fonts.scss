@@ -82,7 +82,6 @@ p {
 	font-family: $sans-serif;
 	letter-spacing: 1;
 	line-height: 1.55em;
-	margin-bottom: 1.5em;
 
 	span {
 		font-family: $serif;
@@ -117,4 +116,8 @@ hr {
 .italic {
 	font-family: $serif;
 	font-style: italic;
+}
+
+.action {
+	color: $action-color;
 }

@@ -12,7 +12,7 @@
 	}
 }
 .page-content {
-	@include outer-container (100%);
+	@include outer-container (95%);
 	@include media(min-width $small-screen){
 		@include outer-container (95%);
 	}
@@ -23,45 +23,67 @@
 		@include outer-container (1024px);
 	}	
 	
-	> #top-left, > #top-right {
-		@include span-columns(6);
-		@include omega;
+	> .top {
+		@include span-columns(12);
+		text-align: center;		
 		margin-top: $content-margin;
+		margin-bottom: $content-margin;		
 		p {
-			margin-bottom: 0;
+			//margin-bottom: 0;
 		}
-		> ul {
-			margin: 0;
-			> li {
-				display: block;
-				&:nth-child(1){
-					@include span-columns(2);
-				}
-				&:nth-child(2){
-					@include span-columns(2);
-					@include shift(1);
-				}
-				&:nth-child(3){
-					@include span-columns(2);
-					@include shift(2.5);
-				}
-				&:nth-child(4){
-					@include span-columns(2);
-					@include shift(4);
-				}												
+		&#top-right {
+			text-align: center;
+			> p {
+				//font-size: 0.9em;
+				@include span-columns(12);
 			}
+			> #one {
+				text-align: left;
+			}
+			> #two {
+				@include span-columns(8 of 12);
+				@include shift(2);
+			}
+			> #three {
+				@include span-columns(7 of 12);
+				@include shift(5);
+			}
+			> #four {
+				text-align: right;
+			}									
 		}
 	}
-	> #center {
+	> #below-the-fold {
 		@include span-columns(12);
-		margin: $content-margin;
 		@include media(min-width $medium-screen){
 			margin: 0;
 			@include span-columns(6);
 			@include shift(3);
 		}
+		> .center {
+			text-align: center;
+		}
+		> ul {
+			list-style: none;
+			padding-left: $content-margin;
+			padding-right: $content-margin;			
+			> li {
+				&:before {
+					content: "\0025CA";
+					padding-right: 8px;
+					color: $green-light;
+				}
+				&:after {
+					content: "\0025CA";
+					padding-left: 8px;
+					color: $green-light;
+				}				
+				margin-bottom: $content-margin/4;
+				text-align: center;
+			}
+		}
 		> .image-window {
-			max-height: 100px;
+			max-height: 500px;
 			overflow: hidden;
 			> img {
 				display: none;
