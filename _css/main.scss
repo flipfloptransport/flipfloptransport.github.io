@@ -13,6 +13,9 @@
 			margin-right: auto;
 			margin-left: auto;
 		}
+		> p {
+			color: $green-dark;
+		}		
 		@include media(min-width $medium-screen){
 			@include span-columns(6);
 			&#top-left{

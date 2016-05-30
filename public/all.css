@@ -122,6 +122,8 @@ hr {
     display: block;
     margin-right: auto;
     margin-left: auto; }
+  .site-header > div > p {
+    color: #0a7a40; }
   @media screen and (min-width: 768px) {
     .site-header > div {
       float: left;
