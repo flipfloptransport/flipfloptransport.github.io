@@ -10,7 +10,7 @@ title: Flip Flop Transport
 description: "Not quite a taxi, but not a limousine; not a shuttle nor a tour bus; we've created our own category to get you around North Myrtle Beach in style."
 keywords: "North Myrtle Beach, wedding, wedding day transportation, wedding car, taxi, shuttle, limousine, tours, sightseeing, North Myrtle Beach tours, Barefoot Landing shuttle"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://flipfloptransport.github.io" # the base hostname & protocol for your site
+url: "http://www.flipfloptransport.com" # the base hostname & protocol for your site
 repository: https://github.com/flipfloptransport/flipfloptransport.github.io
 
 exclude: ["node_modules", "package.json", "gulpfile.js", "temp", "Gemfile", "Gemfile.lock", "README.md", "documentation"]
