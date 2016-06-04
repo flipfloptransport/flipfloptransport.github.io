@@ -8,7 +8,7 @@
 # Site settings
 title: Flip Flop Transport
 description: "North Myrtle Beach wedding day transportation. North Myrtle Beach tours. Barefoot Landing and Windy Hill beach shuttle, limousine, and taxi services."
-keywords: "North Myrtle Beach, wedding day transportation, wedding car, shuttle, limousine, tours, North Myrtle Beach tours, Barefoot Landing shuttle"
+keywords: "North Myrtle Beach, wedding, wedding day transportation, wedding car, taxi, shuttle, limousine, tours, sightseeing, North Myrtle Beach tours, Barefoot Landing shuttle"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://flipfloptransport.github.io" # the base hostname & protocol for your site
 repository: https://github.com/flipfloptransport/flipfloptransport.github.io

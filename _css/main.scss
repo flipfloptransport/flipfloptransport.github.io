@@ -13,17 +13,46 @@
 			margin-right: auto;
 			margin-left: auto;
 		}
+		> h1 {
+			margin-bottom: 0;
+		}
 		> p {
-			color: $green-dark;
+			&.small {
+				margin-bottom: $content-margin;
+			}
+			&.action {
+				color: $green-dark;
+			}
 		}		
 		@include media(min-width $medium-screen){
 			@include span-columns(6);
 			&#top-left{
 				@include omega;
+				position: absolute;
+				> img {
+					width: 350px;
+					height: 228px;
+				}				
 			}			
 			&#top-right{
-				margin-top: 50px;
+				margin-top: 30px;
+				@include shift(6);
 			}
+		}
+	}
+	@include media(min-width $large-screen){
+		> div#top-left{
+			position: absolute;
+			> img {
+				width: 425px;
+				height: 277px;
+			}
+			@include span-columns(5);
+			@include shift(1);
+		}			
+		> div#top-right{
+			@include span-columns(7);
+			@include shift(5);
 		}
 	}
 }
@@ -83,7 +112,16 @@
 					content: "\0025CA";
 					padding-left: 8px;
 					color: $green-light;
-				}				
+				}
+				&.split {
+					//float: left;
+				}
+				> .diamond:before {
+					content: "\0025CA";
+					color: $green-light;
+					margin-left: 5px;
+					margin-right: 5px;
+				}
 				margin-bottom: $content-margin/4;
 				text-align: center;
 				> p {
